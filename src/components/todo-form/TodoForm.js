@@ -7,8 +7,6 @@ const TodoForm = ({ todo }) => {
 	const { updateTodo } = useTodos();
 
 	const onSubmit = (values) => {
-		console.table([{ key: 'title', value: values[`title-${id}`] }, { key: 'description', value: values[`description-${id}`] }]);
-
 		const data = {
 			id,
 			title: values[`title-${id}`],
