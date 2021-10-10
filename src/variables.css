@@ -1,0 +1,20 @@
+:root {
+	--blue: #00bcd4;
+	--red: #f44336;
+	--darker-red: #d32f2f;
+	--white: #fff;
+	--black: #000;
+	--darker-blue: #0495a8;
+
+	--font-size-regular: 1.6rem;
+	--font-size-small: 1.4rem;
+	--font-size-large: 2.4rem;
+
+	--box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+	--padding-sm: 1rem;
+	--padding-md: 1.5rem;
+	--padding-lg: 2rem;
+
+	--border-radius: 0.5rem;
+}

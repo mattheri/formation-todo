@@ -1,0 +1,42 @@
+.btn {
+	padding: 0.5rem 2rem;
+	appearance: none;
+	cursor: pointer;
+	font-size: var(--font-size-regular);
+	border-radius: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: background-color 150ms;
+}
+
+.btn.primary {
+	border: 1px solid var(--blue);
+	background-color: var(--blue);
+	color: var(--white);
+}
+
+.btn.primary:hover {
+	background-color: var(--darker-blue);
+}
+
+.btn.secondary {
+	border: 1px solid var(--red);
+	background-color: var(--red);
+	color: var(--white);
+}
+
+.btn.secondary:hover {
+	background-color: var(--darker-red);
+}
+
+.btn.link {
+	background-color: transparent;
+	border: 1px solid transparent;
+	color: var(--blue);
+}
+
+.btn.link:hover {
+	background-color: var(--blue);
+	color: var(--white);
+}

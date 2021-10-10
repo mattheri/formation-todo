@@ -1,0 +1,36 @@
+.input-container {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	width: 100%;
+	margin-bottom: 1rem;
+	cursor: pointer;
+}
+
+.input-container label {
+	margin-bottom: 1rem
+}
+
+.input-container input,
+.input-container textarea {
+	width: 100%;
+	padding: 0.5rem;
+	border: 1px solid #ccc;
+	border-radius: 0.25rem;
+	font-size: 1.6rem;
+	outline: none;
+}
+
+.input-container .h2-card {
+	font-weight: normal;
+}
+
+.input-container .h2-card:first-of-type {
+	font-size: 2rem;
+}
+
+.input-container .h2-card:last-of-type {
+	font-size: 1.6rem;
+}

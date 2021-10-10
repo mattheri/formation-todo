@@ -1,0 +1,29 @@
+.header {
+	box-shadow: var(--box-shadow);
+	margin-bottom: 5rem;
+	display: flex;
+}
+
+.header-menu {
+	margin: 0 auto;
+	padding: var(--padding-lg) 0;
+}
+
+.header-menu-list {
+	display: flex;
+	list-style: none;
+	margin: 0 -1.5rem;
+}
+
+.header-menu-item {
+	margin: 0 0.75rem;
+}
+
+.header .logo {
+	display: flex;
+	align-items: center;
+}
+
+.header .logo-title {
+	margin-left: 1.5rem;
+}

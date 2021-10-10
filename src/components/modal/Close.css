@@ -1,0 +1,5 @@
+.close-btn {
+	--btn-width: 3rem;
+	margin-left: calc(100% - calc(var(--btn-width) + 1rem));
+	max-width: var(--btn-width);
+}

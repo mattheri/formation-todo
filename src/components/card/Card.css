@@ -1,0 +1,19 @@
+.card {
+	background-color: var(--white);
+	border-radius: var(--border-radius);
+	box-shadow: var(--box-shadow);
+	display: flex;
+	padding: var(--padding-sm);
+	width: 100%;
+	cursor: grab;
+	margin: 2rem 0;
+	transition: order .3s ease-in-out;
+}
+
+.card .form {
+	margin: 0;
+}
+
+.card-inner {
+	width: 100%;
+}

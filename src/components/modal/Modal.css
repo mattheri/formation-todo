@@ -1,0 +1,29 @@
+.modal-background {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	z-index: 999;
+}
+
+.modal {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	max-width: 992px;
+	background: var(--white);
+	z-index: 1000;
+	border-radius: var(--border-radius);
+	box-shadow: var(--box-shadow);
+	padding: var(--padding-sm);
+	animation: open 500ms ease-in-out 0ms forwards;
+}
+
+@keyframes open {
+	from { opacity: 0; transform: translate(-50%, 0); }
+	to { opacity: 1; transform: translate(-50%, -50%); }
+}
