@@ -1,7 +1,7 @@
 
 import Container from '../../components/container/Container';
 import Modal from '../../components/modal/Modal';
-import CreateTodo from '../createTodo/CreateTodo';
+import CreateTodo from '../create-todo/CreateTodo';
 import Header from '../header/Header';
 import TodosContextProvider from '../todos-context/TodosContext';
 import Todos from '../todos/Todos';
