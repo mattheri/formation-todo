@@ -1,17 +1,31 @@
 import useTodos from '../../hooks/UseTodos';
 
-import { modalRef } from '../../components/modal/Modal';
+import { createTodoModal } from '../create-todo/CreateTodo';
+import { confirmationModal } from '../confirmation-modal/ConfirmationModal';
 
 import Button from '../../components/button/Button';
 import Container from '../../components/container/Container';
 
 import './Header.css';
+import { useEffect } from 'react';
 
 const Header = () => {
-	const openModal = () => modalRef.current.open();
+	const openModal = () => createTodoModal.current.open();
 	const { clearTodos } = useTodos();
 
 	const clearTodosHandler = async () => await clearTodos();
+
+	const confirm = () => confirmationModal.current.open();
+
+	useEffect(
+		() => {
+			if (confirmationModal.current) {
+				confirmationModal.current.register(clearTodosHandler);
+			}
+		},
+		[confirmationModal]
+	)
+
 	return(
 		<Container as='header' fluid className='header'>
 			<div className='logo'>
@@ -23,7 +37,7 @@ const Header = () => {
 						<Button onClick={openModal}>Ajouter une tâche</Button>
 					</li>
 					<li className='header-menu-item'>
-						<Button onClick={clearTodosHandler}>Supperimer toutes les tâches</Button>
+						<Button onClick={confirm}>Supperimer toutes les tâches</Button>
 					</li>
 				</ul>
 			</nav>

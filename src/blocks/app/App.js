@@ -1,6 +1,6 @@
 
 import Container from '../../components/container/Container';
-import Modal from '../../components/modal/Modal';
+import ConfirmationModal from '../confirmation-modal/ConfirmationModal';
 import CreateTodo from '../create-todo/CreateTodo';
 import Header from '../header/Header';
 import TodosContextProvider from '../todos-context/TodosContext';
@@ -11,9 +11,8 @@ import './App.css';
 function App() {
   return (
     <TodosContextProvider>
-      <Modal>
-        <CreateTodo />
-      </Modal>
+      <CreateTodo />
+      <ConfirmationModal />
       <Container fluid>
         <Header />
         <Container>

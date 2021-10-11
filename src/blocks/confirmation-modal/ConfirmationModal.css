@@ -1,0 +1,30 @@
+.modal-content {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.modal-content h3 {
+	font-weight: bold;
+	font-size: 2rem;
+	margin-bottom: 1rem;
+}
+
+.modal-content p {
+	font-size: 1.5rem;
+	margin-bottom: 1rem;
+}
+
+.modal-content .modal-buttons {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	margin: -1rem;
+}
+
+.modal-content .modal-buttons button {
+	margin: 0.5rem;
+}

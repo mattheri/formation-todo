@@ -9,13 +9,6 @@ const FormContextProvider = ({ onSubmit, initialValues = {}, children }) => {
 	const resetFields = () => setFormState(Object.fromEntries(Object.entries(formState).map(([key, _]) => [key, ''])));
 	const getFieldValue = fieldName => formState[fieldName];
 
-	useEffect(
-		() => {
-			console.log(formState);
-		},
-		[formState]
-	)
-
 	const handleSubmit = (event) => {
 		const submitWithValues = onSubmit(event);
 
