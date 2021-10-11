@@ -16,13 +16,12 @@ const VARIANTS_MAP = {
 	important: 'important',
 }
 
-const Card = ({ className, variant = 'normal', children, onRemove, index, todo }) => {
+const Card = ({ className, variant = 'normal', onRemove, index, todo }) => {
 	const cardRef = useRef(null);
 	const classnames = useMergedClassNames({ defaults: DEFAULT_CLASS, custom: className, variants: VARIANTS_MAP[variant] });
 	const { onDragStart, onDragEnd } = useReorderTransition();
 	const preventDefault = e => e.preventDefault();
 	const onDragHandler = () => onDragStart(cardRef.current, todo);
-
 	const onDropHandler = () => onDragEnd(cardRef.current, todo);
 
 	return (

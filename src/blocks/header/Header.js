@@ -1,3 +1,5 @@
+import { useEffect, useCallback } from 'react';
+
 import useTodos from '../../hooks/UseTodos';
 
 import { createTodoModal } from '../create-todo/CreateTodo';
@@ -7,13 +9,12 @@ import Button from '../../components/button/Button';
 import Container from '../../components/container/Container';
 
 import './Header.css';
-import { useEffect } from 'react';
 
 const Header = () => {
 	const openModal = () => createTodoModal.current.open();
 	const { clearTodos } = useTodos();
 
-	const clearTodosHandler = async () => await clearTodos();
+	const clearTodosHandler = useCallback(async () => await clearTodos(), [clearTodos]);
 
 	const confirm = () => confirmationModal.current.open();
 
@@ -22,8 +23,15 @@ const Header = () => {
 			if (confirmationModal.current) {
 				confirmationModal.current.register(clearTodosHandler);
 			}
+
+			return () => {
+				if (confirmationModal.current) {
+					confirmationModal.current.unregister(clearTodosHandler);
+				}
+			}
 		},
-		[confirmationModal]
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+		[confirmationModal, clearTodosHandler]
 	)
 
 	return(
