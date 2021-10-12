@@ -2,6 +2,7 @@ import FormContextProvider from './FormContext';
 import Input from '../input/Input';
 
 import './Form.css';
+import Checkbox from '../checkbox/Checkbox';
 
 const Form = ({ onSubmit, initialValues, children }) => {
 
@@ -19,5 +20,6 @@ const Form = ({ onSubmit, initialValues, children }) => {
 }
 
 Form.Input = Input;
+Form.Checkbox = Checkbox;
 
 export default Form;

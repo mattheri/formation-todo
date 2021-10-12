@@ -1,0 +1,4 @@
+.input-container label input[type=checkbox] {
+	width: auto;
+	margin-left: 1rem;
+}

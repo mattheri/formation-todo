@@ -31,7 +31,7 @@ const TodosContextProvider = ({ children }) => {
 
 	const getTodos = async () => {
 		const response = await LocalStorage.getItemByKey('todos');
-		setTodos(response);
+		setTodos(response.filter(todo => todo.completed === false));
 		firstFetch.current = false;
 	}
 
@@ -43,7 +43,7 @@ const TodosContextProvider = ({ children }) => {
 	)
 
 	return(
-		<TodosContext.Provider value={{ todos, addTodo, removeTodo, updateTodo, clearTodos }}>
+		<TodosContext.Provider value={{ todos: todos.filter(todo => todo.completed === false), addTodo, removeTodo, updateTodo, clearTodos }}>
 			{children}
 		</TodosContext.Provider>
 	);

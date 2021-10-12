@@ -1,4 +1,4 @@
-import { createContext, useState } from 'react';
+import { createContext, useEffect, useState } from 'react';
 
 export const FormContext = createContext({});
 
@@ -14,6 +14,13 @@ const FormContextProvider = ({ onSubmit, initialValues = {}, children }) => {
 
 		submitWithValues(formState);
 	}
+
+	useEffect(
+		() => {
+			console.log('FormContextProvider: formState', formState);
+		},
+		[formState]
+	)
 
 	return(
 		<FormContext.Provider value={{ updateField, resetFields, getFieldValue }}>

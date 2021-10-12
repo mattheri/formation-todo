@@ -11,16 +11,17 @@ const TodoForm = ({ todo }) => {
 			id,
 			title: values[`title-${id}`],
 			description: values[`description-${id}`],
-			completed
+			completed: values[`completed-${id}`]
 		}
 
 		updateTodo(data);
 	}
 
 	return(
-		<Form onSubmit={onSubmit} initialValues={{ [`title-${id}`]: title, [`description-${id}`]: description }}>
+		<Form onSubmit={onSubmit} initialValues={{ [`title-${id}`]: title, [`description-${id}`]: description, [`completed-${id}`]: completed }}>
 			<Form.Input id={`title-${id}`} onClickShowInput />
 			<Form.Input type="textarea" id={`description-${id}`} onClickShowInput />
+			<Form.Checkbox id={`completed-${id}`} label="Compléter" />
 			<Button type='submit'>Mise à jour</Button>
 		</Form>
 	);
