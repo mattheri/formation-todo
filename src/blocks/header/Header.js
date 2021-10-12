@@ -14,7 +14,8 @@ const Header = () => {
 	const openModal = () => createTodoModal.current.open();
 	const { clearTodos } = useTodos();
 
-	const clearTodosHandler = useCallback(async () => await clearTodos(), [clearTodos]);
+	// eslint-disable-next-line react-hooks/exhaustive-deps
+	const clearTodosHandler = useCallback(async () => await clearTodos(), []);
 
 	const confirm = () => confirmationModal.current.open();
 
